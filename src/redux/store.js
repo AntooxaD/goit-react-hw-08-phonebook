@@ -6,13 +6,24 @@ import {
     PERSIST,
     PURGE,
     REGISTER,
+    persistStore,
 } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import contactReducer from './contacts/contactReducers';
+import persistReducer from 'redux-persist/es/persistReducer';
+import authReducer from './auth/auth-slice';
 
-import logger from 'redux-logger';
-import contactReducer from './contactReducers';
+const authPersistConfig = {
+    key: 'auth',
+    storage,
+    whitelist: ['token'],
+};
 
-const store = configureStore({
-    reducer: { contacts: contactReducer },
+export const store = configureStore({
+    reducer: {
+        auth: persistReducer(authPersistConfig, authReducer),
+        contacts: contactReducer,
+    },
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
             serializableCheck: {
@@ -25,9 +36,8 @@ const store = configureStore({
                     REGISTER,
                 ],
             },
-        }).concat(logger),
-
+        }),
     devTools: process.env.NODE_ENV === 'development',
 });
 
-export default store;
+export const persistor = persistStore(store);
