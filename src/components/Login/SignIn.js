@@ -5,8 +5,6 @@ import {
     Button,
     CssBaseline,
     TextField,
-    FormControlLabel,
-    Checkbox,
     Link,
     Grid,
     Typography,
@@ -34,7 +32,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export function SignIn() {
+export default function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
@@ -105,12 +103,7 @@ export function SignIn() {
                             value={password}
                             onChange={handleChange}
                         />
-                        <FormControlLabel
-                            control={
-                                <Checkbox value="remember" color="primary" />
-                            }
-                            label="Remember me"
-                        />
+
                         <Button
                             type="submit"
                             fullWidth

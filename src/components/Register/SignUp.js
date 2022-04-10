@@ -32,7 +32,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export function SignUp() {
+export default function SignUp() {
     const dispatch = useDispatch();
     const [name, setName] = useState('');
 

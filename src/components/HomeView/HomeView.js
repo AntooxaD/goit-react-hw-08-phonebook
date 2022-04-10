@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 
-export const HomeView = () => {
+const HomeView = () => {
     return (
         <Box
             sx={{
@@ -17,3 +17,4 @@ export const HomeView = () => {
         </Box>
     );
 };
+export default HomeView;
