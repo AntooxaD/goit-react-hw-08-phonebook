@@ -11,7 +11,14 @@ const HomeView = () => {
                 alignItems: 'center',
             }}
         >
-            <Typography variant="h2" component="h2">
+            <Typography
+                sx={{
+                    typography: {
+                        fontFamily: '"Apple Color Emoji"',
+                        fontSize: '8rem',
+                    },
+                }}
+            >
                 Phonebook
             </Typography>
         </Box>

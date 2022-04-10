@@ -19,7 +19,7 @@ import { register } from '../../redux/auth/auth-operation';
 
 function Copyright(props) {
     return (
-        <Typography variant="body2" color="#4DEDFF" align="right" {...props}>
+        <Typography variant="body2" color="#039be5" align="right" {...props}>
             {'Copyright © '}
             <Link color="inherit" href="https://mui.com/">
                 Your Website
@@ -73,7 +73,7 @@ export default function SignUp() {
                         alignItems: 'center',
                     }}
                 >
-                    <Avatar sx={{ m: 1, bgcolor: '#4DEDFF' }}>
+                    <Avatar sx={{ m: 1, bgcolor: '#039be5' }}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
@@ -129,7 +129,7 @@ export default function SignUp() {
                             size="small"
                             type="submit"
                             variant="contained"
-                            sx={{ mt: 3, mb: 2 }}
+                            sx={{ mt: 3, mb: 2, bgcolor: '#039be5' }}
                         >
                             Sign Up
                         </Button>

@@ -9,14 +9,24 @@ export default function Navigation() {
     return (
         <Box
             sx={{
-                typography: 'body1',
+                typography: {
+                    fontFamily: '"Apple Color Emoji"',
+                    fontSize: 24,
+                },
+
                 '& > :not(style) + :not(style)': {
-                    ml: 2,
+                    ml: 4,
                 },
             }}
         >
-            <Link href="/">Home</Link>
-            {isLoggedIn && <Link href="/contacts">Contacts</Link>}
+            <Link href="/" underline="none" color="white">
+                Home
+            </Link>
+            {isLoggedIn && (
+                <Link href="/contacts" underline="none" color="white">
+                    Contacts
+                </Link>
+            )}
         </Box>
     );
 }

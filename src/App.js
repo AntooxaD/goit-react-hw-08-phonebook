@@ -60,9 +60,7 @@ function App() {
                         path="/contacts"
                         element={
                             <Suspense fallback={<Skeleton />}>
-                                <PrivateRoute>
-                                    <ContactsView />
-                                </PrivateRoute>
+                                <ContactsView />
                             </Suspense>
                         }
                     />

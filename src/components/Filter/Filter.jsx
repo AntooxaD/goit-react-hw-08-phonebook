@@ -1,7 +1,8 @@
-import { TitleFilter, InputFilter } from '../Styled/Styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContact } from '../../redux/contacts/contactActions';
 import { getFilter } from '../../redux/contacts/selectors';
+import TextField from '@mui/material/TextField';
+import { Box, Typography } from '@mui/material';
 
 function Filter() {
     const dispatch = useDispatch();
@@ -9,10 +10,32 @@ function Filter() {
     const onChange = data => dispatch(filterContact(data.target.value));
 
     return (
-        <label>
-            <TitleFilter> Find contact by name</TitleFilter>
-            <InputFilter type="text" value={filter} onChange={onChange} />
-        </label>
+        <Box>
+            <Typography
+                sx={{
+                    textAlign: 'center',
+                    mt: 2,
+                    mb: 2,
+                    typography: {
+                        fontFamily: '"Apple Color Emoji"',
+                        fontSize: 16,
+                        color: '#039be5',
+                    },
+                }}
+            >
+                {' '}
+                Find contact by name
+            </Typography>
+            <TextField
+                sx={{ ml: 14 }}
+                id="standard-basic"
+                label="Filter"
+                variant="standard"
+                type="text"
+                value={filter}
+                onChange={onChange}
+            />
+        </Box>
     );
 }
 

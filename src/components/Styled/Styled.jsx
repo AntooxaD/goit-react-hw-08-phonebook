@@ -1,18 +1,14 @@
 import styled from 'styled-components';
 
 const Title = styled.h1`
-    font-size: 1.8em;
-    text-align: center;
-    color: palevioletred;
-`;
-const TitleFilter = styled.h3`
     font-size: 1.3em;
     text-align: center;
-    color: palevioletred;
+    color: #039be5;
 `;
+
 const List = styled.ul`
     text-align: center;
-    color: palevioletred;
+    color: #039be5;
 `;
 const ListItem = styled.li`
     height: 20px;
@@ -21,6 +17,7 @@ const ListItem = styled.li`
     :not(:last-of-type) {
         margin-bottom: 10px;
     }
+    color: black;
 `;
 
 const Form = styled.form`
@@ -42,9 +39,6 @@ const Input = styled.input`
     margin-left: 20px;
 `;
 
-const InputFilter = styled.input`
-    margin-left: 100px;
-`;
 const Button = styled.button`
     width: 100px;
     margin: 8px auto;
@@ -53,7 +47,7 @@ const Button = styled.button`
     cursor: pointer;
     :hover,
     :focus {
-        background-color: palevioletred;
+        background-color: #039be5;
         color: #fff;
     }
 `;
@@ -65,7 +59,7 @@ const BtnDelete = styled.button`
     cursor: pointer;
     :hover,
     :focus {
-        background-color: palevioletred;
+        background-color: #039be5;
         color: #fff;
     }
 `;
@@ -82,8 +76,6 @@ export {
     Input,
     Button,
     List,
-    TitleFilter,
-    InputFilter,
     ListItem,
     BtnDelete,
 };
