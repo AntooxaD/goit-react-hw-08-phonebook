@@ -90,7 +90,8 @@ export default function SignUp() {
                                 <TextField
                                     autoComplete="given-name"
                                     name="name"
-                                    required
+                                    multiline
+                                    variant="standard"
                                     fullWidth
                                     label="Name"
                                     autoFocus
@@ -100,7 +101,8 @@ export default function SignUp() {
                             </Grid>
                             <Grid item xs={12}>
                                 <TextField
-                                    required
+                                    multiline
+                                    variant="standard"
                                     fullWidth
                                     label="Email Address"
                                     name="email"
@@ -111,7 +113,8 @@ export default function SignUp() {
                             </Grid>
                             <Grid item xs={12}>
                                 <TextField
-                                    required
+                                    multiline
+                                    variant="standard"
                                     fullWidth
                                     name="password"
                                     label="Password"
@@ -123,8 +126,8 @@ export default function SignUp() {
                             </Grid>
                         </Grid>
                         <Button
+                            size="small"
                             type="submit"
-                            fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
                         >

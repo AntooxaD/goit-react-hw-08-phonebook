@@ -41,7 +41,6 @@ function App() {
                         element={
                             <Suspense fallback={<Skeleton />}>
                                 <PublicRoute restricted redirectTo="/contacts">
-                                    {' '}
                                     <SignUp />
                                 </PublicRoute>
                             </Suspense>

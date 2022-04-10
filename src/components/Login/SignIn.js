@@ -80,10 +80,9 @@ export default function SignIn() {
                         sx={{ mt: 1 }}
                     >
                         <TextField
-                            margin="normal"
-                            required
+                            multiline
                             fullWidth
-                            id="email"
+                            variant="standard"
                             label="Email Address"
                             name="email"
                             autoComplete="email"
@@ -93,12 +92,12 @@ export default function SignIn() {
                         />
                         <TextField
                             margin="normal"
-                            required
+                            multiline
+                            variant="standard"
                             fullWidth
                             name="password"
                             label="Password"
                             type="password"
-                            id="password"
                             autoComplete="current-password"
                             value={password}
                             onChange={handleChange}
@@ -106,9 +105,9 @@ export default function SignIn() {
 
                         <Button
                             type="submit"
-                            fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
+                            size="small"
                         >
                             Sign In
                         </Button>
