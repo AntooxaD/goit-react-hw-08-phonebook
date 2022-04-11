@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 
 export default function UserMenu() {
     const dispatch = useDispatch();
-    const name = useSelector(authSelectors.getUsername);
+    const name = useSelector(authSelectors.getUserName);
 
     return (
         <Box

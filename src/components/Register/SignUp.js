@@ -113,7 +113,7 @@ export default function SignUp() {
                             </Grid>
                             <Grid item xs={12}>
                                 <TextField
-                                    multiline
+                                    required
                                     variant="standard"
                                     fullWidth
                                     name="password"

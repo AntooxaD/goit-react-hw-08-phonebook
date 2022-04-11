@@ -92,17 +92,17 @@ export default function SignIn() {
                         />
                         <TextField
                             margin="normal"
-                            multiline
                             variant="standard"
                             fullWidth
+                            required
                             name="password"
                             label="Password"
                             type="password"
+                            id="password"
                             autoComplete="current-password"
                             value={password}
                             onChange={handleChange}
                         />
-
                         <Button
                             type="submit"
                             variant="contained"
@@ -125,7 +125,7 @@ export default function SignIn() {
                         </Grid>
                     </Box>
                 </Box>
-                <Copyright sx={{ mt: 8, mb: 4 }} />
+                <Copyright sx={{ mt: 4, mb: 4 }} />
             </Container>
         </ThemeProvider>
     );
